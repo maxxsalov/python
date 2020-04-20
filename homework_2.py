@@ -18,9 +18,6 @@ level = int(input("""
 for k in range(len(levels)):
 	if k != level:
 		continue
-	# elif k < level:
-	# 	print("Ты ввел неккоректное значение, я с тобой не играю =(")
-	# 	break
 	else:
 		print("Ты выбрал {level} уровень".format(level=levels[k]))
 		for l in range(len(trials)):

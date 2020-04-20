@@ -8,7 +8,7 @@
 import random
 levels = ['низкий', 'средний', 'высокий']
 trials = [12, 9, 6]
-name_player = input("Првиет! Как тебя зовут? ")
+name_player = input("Привет! Как тебя зовут? ")
 name_player = name_player.strip().title()
 print("Привет, {name_player}! Я хочу сыграть с тобой в игру".format(name_player=name_player))
 level = int(input("""
@@ -30,7 +30,7 @@ for k in range(len(levels)):
 					if player_answer < 1 or player_answer > 99:
 						j += 1
 						print("Введено неккоректное число! У тебя минус одна попытка. Осталось {trial} попыток".format(trial=(trials[l]-j)))
-					elif j == trials[l]-1:
+					elif j == trials[l]-1 and player_answer != random_number:
 						print("""
 							Ты проиграл. Загаданное число - {random_number}. 
 							Но не огорчайся!
